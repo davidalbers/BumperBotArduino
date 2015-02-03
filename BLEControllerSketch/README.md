@@ -1,6 +1,6 @@
 # DGABluetoothRobotArduino
 
-An modified version of example code for the RedBear BLE Shield which acts as a simple controller for a robot. Arduino code which should be paired with this project is in DGABluetoothRobot. 
+An modified version of example code for the RedBear BLE Shield which acts as a simple controller for a robot. Arduino code which should be paired with this project is in DGABluetoothRobot!!!
 
 License
 Copyright (c) 2012-2014 RedBearLab
