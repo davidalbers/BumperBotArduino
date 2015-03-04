@@ -1,7 +1,21 @@
 # DGABluetoothRobotArduino
 
-An modified version of example code for the RedBear BLE Shield which acts as a simple controller for a robot. Arduino code which should be paired with this project is in DGABluetoothRobot!!!
+An modified version of example code for the RedBear BLE Shield which acts as a simple controller for a robot. Android code which should be paired with this project is in DGABluetoothRobot.
 
+How to use:
+Set up the BLE shield using this link: 
+http://redbearlab.com/getting-started-bleshield
+
+Open BumperBotController.ino in Arduino IDE and upload it to an Arduino.
+
+Install the Android app either by importing my project called DGABluetoothRobot or download:
+https://drive.google.com/file/d/0B-4T7iSXnOhdTjdQWVp5ejFqQTg/view?usp=sharing
+
+Connect the app the Arduino.
+
+
+
+Download the 
 License
 Copyright (c) 2012-2014 RedBearLab
 
