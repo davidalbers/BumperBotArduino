@@ -3,15 +3,25 @@
 An modified version of example code for the RedBear BLE Shield which acts as a simple controller for a robot. Android code which should be paired with this project is in DGABluetoothRobot.
 
 How to use:
+
+#RedBear BLE Method:
 Set up the BLE shield using this link: 
 http://redbearlab.com/getting-started-bleshield
 
-Open BumperBotController.ino in Arduino IDE and upload it to an Arduino.
+Open BLEControllerSketch/BumperBotController.ino in Arduino IDE and upload it to an Arduino.
 
-Install the Android app either by importing my project called DGABluetoothRobot or download:
+Install the Android app either by importing my project called BumperBotAndroid in eclipse or download:
 https://drive.google.com/file/d/0B-4T7iSXnOhdTjdQWVp5ejFqQTg/view?usp=sharing
 
-Connect the app the Arduino.
+#HC06 Bluetooth Method:
+Set up the bluetooth module using this link:
+http://www.instructables.com/id/Add-bluetooth-to-your-Arduino-project-ArduinoHC-06/
+
+Open BumperBotHC09/BumperBotHC09.ino in Arduino IDE and upload it to an Arduino.
+
+Install the Android app either by importing my project called BumperBotArduinoHC06 in eclipse or download:
+...
+
 
 
 
