@@ -64,6 +64,8 @@ void loop()
   static byte old_state = LOW;
   int rightSpeed = -1;
   int leftSpeed = -1;
+  boolean turnOnBuzzer = false;
+  boolean turnOffBuzzer = false;
     // If data is ready
     while(ble_available())
     {
@@ -97,13 +99,15 @@ void loop()
         else if (data0 == 0x04)
         {
           analog_enabled = false;
-//          leftServo.write(0);
           analogWrite(PWM_PIN, 0);
           digitalWrite(DIGITAL_OUT_PIN, LOW);
         }
         else if(data0 == 0x05) 
         {
-          rightSpeed = data1;
+//          if(data1 == 0x01)
+//            turnOffBuzzer = true;
+//          else if(data1 == 0x02)
+//             turnOnBuzzer = true;
         }
 
     }
@@ -114,7 +118,7 @@ void loop()
       //a limit switch is triggered, go in reverse
       leftServo.write(20);
       rightServo.write(165);
-      analogWrite(buzzerPin, 150);
+      analogWrite(buzzerPin, 10);
       reverse = true; 
     } else if (reverse) {
       //limit switch no longer triggered but robot is in reverse, stop the robot
@@ -129,11 +133,16 @@ void loop()
         rightServo.write(rightSpeed);
       if(leftSpeed >= 0) 
         leftServo.write(leftSpeed);
+//      if(turnOnBuzzer)
+//        analogWrite(buzzerPin, 150);
+//      if(turnOffBuzzer)
+//        analogWrite(buzzerPin, 0);
     }
     else if (!ble_connected()) {
       //if loose connection, stop the robot
       rightServo.write(0);
       leftServo.write(0);
+//      analogWrite(buzzerPin, 0);
     }
     
   
